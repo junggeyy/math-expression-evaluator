@@ -2,9 +2,11 @@
 format.md
 math/
 lightning_logs/
+.DS_Store
 
 # ML files
 /ML/data/dataset/
 ML/check_data.py
 ML/debug_labels.py
 saved_models/
+/ML/data/custom_test
