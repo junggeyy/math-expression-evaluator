@@ -9,17 +9,13 @@ class PyTorchMLP(torch.nn.Module):
 
             torch.nn.Linear(num_features, 512),
             torch.nn.ReLU(),
-            torch.nn.Dropout(0.3),
+            torch.nn.Dropout(0.2),
 
             torch.nn.Linear(512, 256),
             torch.nn.ReLU(),
-            torch.nn.Dropout(0.3),
+            torch.nn.Dropout(0.1),
 
-            torch.nn.Linear(256, 128),
-            torch.nn.ReLU(),
-            torch.nn.Dropout(0.2),
-
-            torch.nn.Linear(128, num_classes),
+            torch.nn.Linear(256, num_classes),
         )
 
     def forward(self, x):

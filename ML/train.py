@@ -19,11 +19,11 @@ def train():
     print(f"Training model with {num_features} features and {num_classes} classes")
 
     base_model = PyTorchMLP(num_features, num_classes)
-    lightning_model = MLP(model=base_model, learning_rate=0.0005, num_classes=num_classes)
+    lightning_model = MLP(model=base_model, learning_rate=0.001, num_classes=num_classes)
 
     # defining Trainer
     trainer = Trainer(
-        max_epochs=20,
+        max_epochs=40,
         accelerator="auto",
         devices="auto",
     )
